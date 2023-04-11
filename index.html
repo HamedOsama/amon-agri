@@ -13,11 +13,11 @@
     name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
-  <link rel="manifest" href="/assets/meta/site.webmanifest">
-  <link rel="mask-icon" href="/assets/meta/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/meta/favicon-16x16.png">
+  <link rel="manifest" href="assets/meta/site.webmanifest">
+  <link rel="mask-icon" href="assets/meta/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
@@ -342,9 +342,7 @@
 
       <div class="section-title">
         <h2>Services</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>Our Services portfolio supports all stakeholders of the agrifood value chain. </p>
       </div>
 
       <div class="row">
@@ -358,8 +356,8 @@
               </svg>
               <i class="bx bxl-dribbble"></i>
             </div>
-            <h4><a href="">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <h4><a href="">Farm Management Software</a></h4>
+            <p> Digitalizing Farms for Maximum Efficiency and Full Traceability. </p>
           </div>
         </div>
 
@@ -373,8 +371,9 @@
               </svg>
               <i class="bx bx-file"></i>
             </div>
-            <h4><a href="">Sed Perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <h4><a href="">Crop Management</a></h4>
+            <p>We provide a comprehensive suite of tools for managing crops, including planning, planting,
+              fertilization, pest and disease management, and harvest management. </p>
           </div>
         </div>
 
@@ -388,8 +387,9 @@
               </svg>
               <i class="bx bx-tachometer"></i>
             </div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <h4><a href="">Financial Management</a></h4>
+            <p>We help farmers to track their finances, including expenses, income and profitability. We also provide
+              detailed reports and analytics to help farmers make informed decisions about their operations</p>
           </div>
         </div>
 
@@ -403,8 +403,9 @@
               </svg>
               <i class="bx bx-layer"></i>
             </div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            <h4><a href="">Plant Breeding</a></h4>
+            <p>We develop new and improved plant varieties through selective breeding and genetic manipulation
+              techniques.</p>
           </div>
         </div>
 
@@ -418,8 +419,8 @@
               </svg>
               <i class="bx bx-slideshow"></i>
             </div>
-            <h4><a href="">Dele Cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            <h4><a href="">Recycling </a></h4>
+            <p>We provide an effective solution to the problem of agricultural waste management.</p>
           </div>
         </div>
 
@@ -433,8 +434,9 @@
               </svg>
               <i class="bx bx-arch"></i>
             </div>
-            <h4><a href="">Divera Don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            <h4><a href="">Farm Monitoring</a></h4>
+            <p>Monitoring farms by agricultural engineers who are trained professionals specialized in applying
+              engineering principles and technology to agricultural production and processing. </p>
           </div>
         </div>
 
@@ -739,20 +741,24 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form role="form" class="email-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" required>
+            </div>
             <div class="row">
-              <div class="form-group col-md-6">
-                <label for="name">Your Name</label>
-                <input type="text" name="name" class="form-control" id="name" required>
-              </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
                 <label for="name">Your Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
+                <input type="email" class="form-control" name="email" id="email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Phone</label>
+                <input type="number" name="phone" class="form-control" id="phone">
               </div>
             </div>
             <div class="form-group mt-3">
               <label for="name">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+              <input type="text" class="form-control" name="subject" id="subject">
             </div>
             <div class="form-group mt-3">
               <label for="name">Message</label>
@@ -763,7 +769,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit" class="contact-btn">Send Message</button></div>
           </form>
         </div>
 

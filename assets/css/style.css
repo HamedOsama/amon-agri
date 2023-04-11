@@ -1334,8 +1334,26 @@ section {
   border-radius: 4px;
 }
 
-.contact .email-form button[type=submit]:hover {
+.contact .email-form button[type=submit]:hover,
+.contact .email-form button[type=submit]:disabled {
   background: #6ec083;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @keyframes animate-loading {
