@@ -13,11 +13,11 @@
     name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/meta/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/meta/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/meta/favicon-16x16.png">
-  <link rel="manifest" href="assets/meta/site.webmanifest">
-  <link rel="mask-icon" href="assets/meta/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
+  <link rel="manifest" href="/assets/meta/site.webmanifest">
+  <link rel="mask-icon" href="/assets/meta/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
@@ -52,7 +52,7 @@
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">amonagri180@gmail.com</a>
         <!-- <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55 -->
       </div>
       <!-- <div class="social-links d-none d-md-block">
@@ -109,7 +109,7 @@
   <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-      <!-- <ol class="carousel-indicators" id="hero-carousel-indicators"></ol> -->
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
 
@@ -138,8 +138,8 @@
           </div>
         </div>
 
-        Slide 3 -->
-        <!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+        Slide 3
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span class="thin">Amon Agri</span></h2>
@@ -207,14 +207,15 @@
       <div class="section-title">
         <h2>About Us</h2>
         <p>Welcome to Amon Agri, a company that provides innovative solutions for sustainable agriculture. At
-          GreenTech, we believe that sustainable agriculture is the key to ensuring food security for future
+          Amon Agri, we believe that sustainable agriculture is the key to ensuring food security for future
           generations. That's why we offer a range of services that are designed to help farmers maximize productivity
           while minimizing their environmental impact. </p>
       </div>
 
       <div class="row">
         <div class="col-lg-6 order-1 order-lg-2">
-          <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <img src="assets/img/Shafei.jpeg" class="img-fluid" alt="Shafei, our co-founder">
+          <p style="font-size: 13px;"><i>Our operations manager</i>, Shafei, in the farm</p>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3> -->
@@ -224,19 +225,24 @@
             tailored to their specific requirements.
           </p>
           <ul>
-            <li><i class="bi bi-check-circled"></i>We offer farm management software that is designed to help farmers
-              optimize their operations and maximize their productivity. Our software includes features such as crop
-              and soil management, machinery and equipment selection and design . By using our farm management
-              software, farmers can make informed decisions and improve their efficiency and profitability. </li>
-            <li><i class="bi bi-check-circled"></i>Our plant breeding services focus on developing new and improved
-              crop varieties that are better adapted to specific environmental conditions and have improved yields and
+            <li><i class="bi bi-check-circled"></i><strong>We offer farm management software that is designed to help
+                farmers
+                optimize their operations and maximize their productivity.</strong> Our software includes features such
+              as crop
+              and soil management, machinery and equipment selection and design. </li>
+            <li><i class="bi bi-check-circled"></i>Our <strong>plant breeding services </strong> focus on developing
+              <strong>new and
+                improved
+                crop varieties</strong> that are better adapted to specific environmental conditions and have improved
+              yields and
               nutritional value. We use the latest breeding techniques and technologies to accelerate the breeding
-              process and ensure that our clients have access to the best possible plant varieties. </li>
+              process and ensure that our clients have access to the best possible plant varieties.
+            </li>
             <li><i class="bi bi-check-circled"></i>
-              We also offer agricultural waste management services that help farmers to recycle their agricultural
+              We also offer <strong>agricultural waste management services</strong> that help farmers to recycle their
+              agricultural
               waste and reduce their environmental impact. Our recycling services include composting, biogas
-              production, and recycling of plastic and other non-organic wastes. By implementing these recycling
-              services, farmers can create a more sustainable and efficient agricultural system.</li>
+              production, and recycling of plastic and other non-organic wastes.</li>
           </ul>
         </div>
       </div>
@@ -724,7 +730,7 @@
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p><a class="email" href="mailto:info@example.com">info@example.com</a></p>
+              <p><a class="email" href="mailto:amonagri180@gmail.com">amonagri180@gmail.com</a></p>
             </div>
 
             <!-- <div class="phone">
@@ -741,24 +747,20 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form role="form" class="email-form">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" class="form-control" id="name" required>
-            </div>
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
                 <label for="name">Your Email</label>
-                <input type="email" class="form-control" name="email" id="email">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="name">Your Phone</label>
-                <input type="number" name="phone" class="form-control" id="phone">
+                <input type="email" class="form-control" name="email" id="email" required>
               </div>
             </div>
             <div class="form-group mt-3">
               <label for="name">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject">
+              <input type="text" class="form-control" name="subject" id="subject" required>
             </div>
             <div class="form-group mt-3">
               <label for="name">Message</label>
@@ -769,7 +771,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit" class="contact-btn">Send Message</button></div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
 
@@ -778,7 +780,7 @@
     </div>
   </section><!-- End Contact Section -->
 
-  </main> -->
+  </main>
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -817,7 +819,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 
 </body>
 
