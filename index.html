@@ -13,11 +13,11 @@
     name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
-  <link rel="manifest" href="/assets/meta/site.webmanifest">
-  <link rel="mask-icon" href="/assets/meta/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/meta/favicon-16x16.png">
+  <link rel="manifest" href="assets/meta/site.webmanifest">
+  <link rel="mask-icon" href="assets/meta/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
@@ -207,7 +207,7 @@
       <div class="section-title">
         <h2>About Us</h2>
         <p>Welcome to Amon Agri, a company that provides innovative solutions for sustainable agriculture. At
-          Amon Agri, we believe that sustainable agriculture is the key to ensuring food security for future
+          GreenTech, we believe that sustainable agriculture is the key to ensuring food security for future
           generations. That's why we offer a range of services that are designed to help farmers maximize productivity
           while minimizing their environmental impact. </p>
       </div>
@@ -741,20 +741,24 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form role="form" class="email-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" required>
+            </div>
             <div class="row">
-              <div class="form-group col-md-6">
-                <label for="name">Your Name</label>
-                <input type="text" name="name" class="form-control" id="name" required>
-              </div>
               <div class="form-group col-md-6 mt-3 mt-md-0">
                 <label for="name">Your Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
+                <input type="email" class="form-control" name="email" id="email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Phone</label>
+                <input type="number" name="phone" class="form-control" id="phone">
               </div>
             </div>
             <div class="form-group mt-3">
               <label for="name">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+              <input type="text" class="form-control" name="subject" id="subject">
             </div>
             <div class="form-group mt-3">
               <label for="name">Message</label>
@@ -765,7 +769,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit" class="contact-btn">Send Message</button></div>
           </form>
         </div>
 

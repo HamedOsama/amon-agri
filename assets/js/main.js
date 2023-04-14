@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -118,7 +118,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -127,7 +127,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -137,7 +137,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -166,14 +166,14 @@
   /**
    * Hero carousel indicators
    */
-  let heroCarouselIndicators = select("#hero-carousel-indicators")
-  let heroCarouselItems = select('#heroCarousel .carousel-item', true)
+  // let heroCarouselIndicators = select("#hero-carousel-indicators")
+  // let heroCarouselItems = select('#heroCarousel .carousel-item', true)
 
-  heroCarouselItems.forEach((item, index) => {
-    (index === 0) ?
-    heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-  });
+  // heroCarouselItems.forEach((item, index) => {
+  //   (index === 0) ?
+  //     heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>" :
+  //     heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
+  // });
 
   /**
    * Clients Slider
@@ -223,9 +223,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -264,3 +264,58 @@
   });
 
 })()
+
+const form = document.querySelector('.email-form');
+
+const phone = form.querySelector('#phone');
+const email = form.querySelector('#email');
+
+
+form.addEventListener('submit', async (e) => {
+  // prevent default form submission
+  e.preventDefault();
+  // validate form
+  if (phone.value === '' && email.value === '') {
+    form.querySelector('.error-message').innerHTML = 'Please enter your phone number and email address';
+    form.querySelector('.error-message').classList.add('d-block');
+    return;
+  }
+  try {
+    // get form data
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    // show loading
+    form.querySelector('.loading').classList.add('d-block');
+    // hide error message
+    form.querySelector('.error-message').classList.remove('d-block');
+    form.querySelector('.sent-message').classList.remove('d-block');
+    // disable button
+    form.querySelector('.contact-btn').disabled = true;
+    // send data to server
+    const req = await fetch('https://amon-agri-backend.onrender.com/api/v1/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const res = await req.json();
+    // hide loading
+    form.querySelector('.loading').classList.remove('d-block');
+    // show success message
+    form.querySelector('.sent-message').classList.add('d-block');
+    // enable button
+    form.querySelector('.contact-btn').disabled = false;
+    // reset form
+    form.reset();
+    console.log(res);
+  } catch (error) {
+    // hide loading
+    form.querySelector('.loading').classList.remove('d-block');
+    // show error message
+    form.querySelector('.error-message').innerHTML = error.message;
+    form.querySelector('.error-message').classList.add('d-block');
+    // enable button
+    form.querySelector('.contact-btn').disabled = false;
+  }
+});
